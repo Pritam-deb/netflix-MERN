@@ -2,37 +2,21 @@ import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import UserList from "./pages/userList/UserList";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 
 function App() {
   return (
-    // <Router>
-    //   <Routes>
-    //     <Navbar />
-    //     <div className="container">
-    //       <Sidebar />
-    //       <Route exact path="/">
-    //         <Home />
-    //       </Route>
-    //       <Route path="/users">
-    //         <UserList />
-    //       </Route>
-    //     </div>
-    //   </Routes>
-    // </Router>
-    <div>
+    <BrowserRouter>
       <Navbar />
       <div className="container">
         <Sidebar />
-        <UserList />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/users" element={<UserList />} />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
