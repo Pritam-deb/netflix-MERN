@@ -7,21 +7,21 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
-    // <div>
-    //   <Router>
-    //     <Routes>
-    //       <div className="container">
-    //       </div>
-    //     </Routes>
-    //   </Router>
-    // </div>
-    <>
+    // <Router>
+    <div>
       <Navbar />
-      <Sidebar />
-    </>
+      <div className="container">
+        <Sidebar />
+        {/* <Route exact path="/"> */}
+        <Home />
+        {/* </Route> */}
+      </div>
+    </div>
+    // </Router>
   );
 }
 
