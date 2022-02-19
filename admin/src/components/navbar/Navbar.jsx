@@ -1,5 +1,6 @@
 import React from "react";
 import { NotificationsNone, Language, Settings } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -7,7 +8,9 @@ const Navbar = () => {
     <div className="topbar">
       <div className="topbarWrapper">
         <div className="topLeft">
-          <span className="logo">Netflix Admin</span>
+          <Link to="/" className="link">
+            <span className="logo">Netflix Admin</span>
+          </Link>
         </div>
         <div className="topRight">
           <div className="topbarIconContainer">
