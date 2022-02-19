@@ -8,6 +8,7 @@ import User from "./pages/user/User";
 import NewUser from "./pages/newUser/NewUser";
 import MovieList from "./pages/movieList/MovieList";
 import Movie from "./pages/movie/Movie";
+import NewMovie from "./pages/newMovie/NewMovie";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/newUser" element={<NewUser />} />
           <Route path="/movies" element={<MovieList />} />
           <Route path="/movie/:movieId" element={<Movie />} />
+          <Route path="/newMovie" element={<NewMovie />} />
         </Routes>
       </div>
     </BrowserRouter>
